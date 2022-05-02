@@ -15,7 +15,7 @@ jobs:
         pwd
         ls
         eval $(minikube -p minikube docker-env)
-        docker build -t appv1 ./appv1/
+        docker build -t appv1 ./app1/
         docker build -t appv2 ./appv2/
         echo -n "verifying images:"
         docker images        
