@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-whale-green
+  name: hello-whale-blue
 spec:
   replicas: 5
   selector:
@@ -9,14 +9,14 @@ spec:
       app: hello-whale-app
   template:
     metadata:
-      name: hello-green-whale-pod
+      name: hello-blue-whale-pod
       labels:
         app: hello-whale-app
-        version: green
+        version: blue
     spec:
       containers:
       - name: hello-whale-container
-        image: vamsijakkula/hello-green-whale:v1
+        image: vamsijakkula/hello-blue-whale:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service 
 metadata:
-  name: hello-whale-green-svc
+  name: hello-whale-blue-svc
   labels:
     app: hello-whale-app
-    version: green
+    version: blue
 spec:
   selector:
     app: hello-whale-app
@@ -39,15 +39,12 @@ spec:
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  annotations:
-    nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-weight: "20"
-  name: green-ingress
+  name: blue-ingress
 spec:
  rules:
   - host: hello.whale
     http:
       paths:
       - backend:
-          serviceName: hello-whale-green-svc
+          serviceName: hello-whale-blue-svc
           servicePort: 80
