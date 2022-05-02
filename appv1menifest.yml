@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: appv1-container
-        image: vamsijakkula/hello-blue-whale:v1
+        image: app1
         imagePullPolicy: Never
         ports:
         - containerPort: 80
