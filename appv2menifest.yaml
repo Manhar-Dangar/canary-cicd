@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: appv2-container
-        image: appv2
+        image: "appv2:latest"
         imagePullPolicy: Never
         ports:
         - containerPort: 80
@@ -47,6 +47,8 @@ spec:
   - host: canary.com
     http:
       paths:
-      - backend:
-          serviceName: appv2-svc
-          servicePort: 80
+            backend:
+              service:
+                name: appv2-svc
+                port:
+                  number: 30007
