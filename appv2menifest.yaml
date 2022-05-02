@@ -40,8 +40,7 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-by-header: "Region"
-    nginx.ingress.kubernetes.io/canary-by-header-pattern: "va|md"
+    nginx.ingress.kubernetes.io/canary-weight: "50"
   name: manhardangar.ml
 spec:
   rules:
