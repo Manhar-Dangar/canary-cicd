@@ -41,7 +41,7 @@ metadata:
   name: appv1-ingress
 spec:
   rules:
-    - host: http://manhardangar.ml
+    - host: manhardangar.ml
       http:
         paths:
           - path: /
