@@ -42,7 +42,7 @@ metadata:
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-by-header: "Region"
     nginx.ingress.kubernetes.io/canary-by-header-pattern: "va|md"
-  name: http://manhardangar.ml
+  name: manhardangar.ml
 spec:
   rules:
     - host: canary.com
