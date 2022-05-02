@@ -24,4 +24,4 @@ jobs:
         kubectl apply -f appv1menifest.yml
     - name: Deploy to minikube appv2
       run:
-        kubectl apply -f appv2menifest.yml
+        kubectl apply -f appv2menifest.yaml
