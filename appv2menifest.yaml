@@ -35,7 +35,7 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30007
+      nodePort: 30008
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -55,4 +55,4 @@ spec:
               service:
                 name: appv2-svc
                 port:
-                  number: 30007
+                  number: 30008
