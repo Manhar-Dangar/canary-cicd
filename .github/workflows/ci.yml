@@ -19,7 +19,7 @@ jobs:
         docker build -t appv2:latest ./appv2/
         echo -n "verifying images:"
         docker images        
-    - name: Deploy to minikube appv1
+    - name: Deploy to minikube appv1 
       run:
         kubectl apply -f appv1menifest.yml
     - name: Deploy to minikube appv2
