@@ -27,11 +27,11 @@ metadata:
   name: appv1-svc
   labels:
     app: appv1
-    version: blue
+    version: v1
 spec:
   type: NodePort
   selector:
-    app: hello-whale-app
+    app: appv1
   ports:
     - port: 80
       targetPort: 80
@@ -43,7 +43,7 @@ metadata:
   name: appv1-ingress
 spec:
   rules:
-    - host: hello-blue-whale.com
+    - host: canary.com
       http:
         paths:
           - path: /
