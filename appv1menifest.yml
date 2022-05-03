@@ -41,7 +41,7 @@ metadata:
   name: appv1-ingress
 spec:
   rules:
-    - host: canary.com
+    - host: manhardangar.ml
       http:
         paths:
           - path: /
