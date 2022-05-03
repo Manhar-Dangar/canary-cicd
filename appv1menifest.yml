@@ -13,7 +13,7 @@ spec:
       labels:
         app: appv1
         version: v1
-    spec:
+    spec: 
       containers:
       - name: appv1-container
         image: "appv1:latest"
