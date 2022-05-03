@@ -13,7 +13,7 @@ jobs:
 #      run: kubectl delete deploy appv1
 #    - name: Delete app version 2
 #      run: kubectl delete deploy appv2
-    - name: Build image
+    - name: Build image 
       run: |
         export SHELL=/bin/bash
         pwd
