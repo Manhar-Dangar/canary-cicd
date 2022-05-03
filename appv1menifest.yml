@@ -41,7 +41,7 @@ metadata:
   name: appv1-ingress
 spec:
   rules:
-    - host: manhardangar.ml
+    - host: ec2-3-110-28-49.ap-south-1.compute.amazonaws.com
       http:
         paths:
           - path: /
