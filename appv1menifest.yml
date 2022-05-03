@@ -50,4 +50,4 @@ spec:
               service:
                 name: appv1-svc
                 port:
-                  number: 80
+                  number: 80 
