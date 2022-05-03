@@ -41,10 +41,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-weight: "50"
-  name: ec2-3-110-28-49.ap-south-1.compute.amazonaws.com
 spec:
   rules:
-    - host: canary.com
+    - host: ec2-3-110-28-49.ap-south-1.compute.amazonaws.com
       http:
         paths:
           - path: /
