@@ -27,7 +27,7 @@ metadata:
   name: appv1-svc
   labels:
     app: appv1
-    version: blue
+    version: v1
 spec:
   selector:
     app: appv1
