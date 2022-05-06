@@ -29,11 +29,11 @@ metadata:
     app: appv2
     version: v2
 spec:
+  type: NodePort
   selector:
     app: appv2
   ports:
-    - port: 5000
-      targetPort: 5000
+     port: 5000
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
