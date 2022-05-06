@@ -29,6 +29,7 @@ metadata:
     app: appv1
     version: v1
 spec:
+  tyep: NodePort
   selector:
     app: appv1
   ports:
