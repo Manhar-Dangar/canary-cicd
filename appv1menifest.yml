@@ -28,11 +28,16 @@ metadata:
   labels:
     app: appv1
     version: v1
-spec:
-  selector:
+ spec:
+  selector:    
     app: appv1
-  ports:
-    - port: 5000
+  type: NodePort
+  ports:  
+  - name: http
+    port: 5000
+    targetPort: 5000
+    nodePort: 30036
+    protocol: TCP
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
