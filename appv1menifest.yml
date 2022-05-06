@@ -41,7 +41,7 @@ metadata:
   name: appv1-ingress
 spec:
   rules:
-    - host: ec2-3-109-157-218.ap-south-1.compute.amazonaws.com
+    - host: canary.com
       http:
         paths:
           - path: /
