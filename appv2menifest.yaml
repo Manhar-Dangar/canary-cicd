@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: appv2
 spec:
   replicas: 1
@@ -9,19 +9,19 @@ spec:
       app: appv2
   template:
     metadata:
-      name: appv2-pod 
+      name: appv2-pod
       labels:
         app: appv2
         version: v2
-     spec: 
+    spec: 
       containers:
       - name: appv2-container
         image: "appv2:latest"
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
----
-apiVersion: v1
+---    
+apiVersion: v2
 kind: Service 
 metadata:
   name: appv2-svc
@@ -30,7 +30,7 @@ metadata:
     version: v2
 spec:
   selector:
-    app: appv1
+    app: appv2
   type: LoadBalancer
   ports:
   - port: 5000
@@ -42,7 +42,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-weight: "50"
-  name: appv1-ingress
+  name: appv2-ingress
 spec:
   rules:
     - host: canary.com
