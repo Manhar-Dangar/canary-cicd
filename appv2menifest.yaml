@@ -9,7 +9,7 @@ spec:
       app: appv2
   template:
     metadata:
-      name: appv2-pod
+      name: appv2-pod 
       labels:
         app: appv2
         version: v2
