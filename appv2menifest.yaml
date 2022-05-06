@@ -13,16 +13,13 @@ spec:
       labels:
         app: appv2
         version: v2
- spec:
-  selector:    
+spec:
+  selector:
     app: appv2
-  type: NodePort
-  ports:  
-  - name: http
-    port: 5000
+  type: LoadBalancer
+  ports:
+  - port: 5000
     targetPort: 5000
-    nodePort: 30037
-    protocol: TCP
 ---
 apiVersion: v1
 kind: Service
